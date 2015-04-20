@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER Honglin Feng <hfeng@tutum.co> 
+MAINTAINER Honglin Feng <hfeng@tutum.co>
 
 # Install packages
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server pwgen
@@ -11,5 +11,5 @@ RUN chmod +x /*.sh
 
 ENV AUTHORIZED_KEYS **None**
 
-EXPOSE 22
+EXPOSE 22 2000
 CMD ["/run.sh"]
